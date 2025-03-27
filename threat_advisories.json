@@ -61,6 +61,21 @@
     },
     {
         "TLP": "AMBER",
+        "Criticality": "Critical",
+        "Threat Type": "Vulnerabilities (Remote Code Execution)",
+        "Title": "Critical RCE in Veeam Backup & Replication",
+        "Affected Product": ": Veeam Backup & Replication versions 12.3.0.310 and earlier (CVE-2025-23120) Veeam Backup & Replication versions prior to 12.1.2.172 (CVE-2024-40711)",
+        "CVE": "CVE-2025-23120 CVE-2024-40711",
+        "Target Sector": ":   All sectors utilizing Veeam Backup & Replication",
+        "Region": ":  Global",
+        "Executive Summary": ":",
+        "Threat Profile": ": TACTIC TECHNIQUE ID TECHNIQUE Lateral Movement T1210 Exploitation of Remote Services",
+        "Recommendation": ": Immediate Patching: Upgrade to Veeam Backup & Replication version 12.3.1 (build 12.3.1.1139) to address CVE-2025-23120. For CVE-2024-40711, ensure that VBR is updated to version 12.1.2.172 or later. Monitoring and Logging: Implement comprehensive logging and continuous monitoring to detect unauthorized access attempts.",
+        "Reference": ": https://nvd.nist.gov/vuln/detail/cve-2024-40711 https://www.sonicwall.com/blog/insecure-deserialization-in-veeam-backup-and-replication-cve-2024-40711 https://cybersecuritynews.com/critical-veeam-backup-replication-vulnerability/",
+        "Patch Details": ": Veeam Backup & Replication version 12.3.1 (build 12.3.1.1139) addresses CVE-2025-23120. Veeam Backup & Replication version 12.1.2.172 addresses CVE-2024-40711. --  Aman Pandya Digital Forensics and\u00a0 Security Operation Center (SOC) Forensic Cyber Tech."
+    },
+    {
+        "TLP": "AMBER",
         "Criticality": "HIGH",
         "Threat Type": "Software Supply Chain Attack",
         "Title": "VSCode Extensions Spreading Ransomware",
