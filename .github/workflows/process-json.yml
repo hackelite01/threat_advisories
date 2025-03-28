@@ -1,0 +1,33 @@
+name: Process JSON for Grafana
+
+on:
+  push:
+    paths:
+      - 'data/threat_advisories.json'  # Trigger when this file is updated
+  workflow_dispatch:  # Allow manual execution
+
+jobs:
+  process-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Process JSON data
+        run: python scripts/process_json.py  # This script will update the JSON
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions@github.com"
+          git add data/threat_advisories_processes.json
+          git commit -m "Updated processed JSON for Grafana visualization" || echo "No changes to commit"
+          git push
