@@ -3,7 +3,7 @@ name: Process JSON for Grafana
 on:
   push:
     paths:
-      - 'data/threat_advisories.json'  # Trigger when this file is updated
+      - './threat_advisories.json'  # Trigger when this file is updated
   workflow_dispatch:  # Allow manual execution
 
 jobs:
@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions@github.com"
-          git add data/threat_advisories_processes.json
+          git add ./data/threat_advisories_processes.json
           git commit -m "Updated processed JSON for Grafana visualization" || echo "No changes to commit"
           git push
