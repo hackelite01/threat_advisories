@@ -1,5 +1,4 @@
 # requirements.txt example
 requests
 pandas
-os
-datetime
+
