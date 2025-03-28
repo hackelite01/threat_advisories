@@ -33,7 +33,7 @@ grafana_data = {
 }
 
 # Save as JSON (Grafana format)
-output_filename = "data/threat_advisories_processes.json"
+output_filename = "./data/threat_advisories_processes.json"
 with open(output_filename, "w", encoding="utf-8") as file:
     json.dump(grafana_data, file, indent=4)
 
