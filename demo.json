@@ -1,0 +1,43 @@
+[
+    {
+        "Incident ID": "INC-2025-001",
+        "Threat Type": "Ransomware",
+        "Title": "Albabat Ransomware Abuses GitHub for Attacks",
+        "Criticality": "HIGH",
+        "Detected Timestamp": "2025-03-29 10:30:00",
+        "Affected Product": ["Windows", "Linux", "macOS"],
+        "Target Sector": ["Technology & Software Development", "Financial Services", "Retail & E-Commerce"],
+        "Region": "Global",
+        "Threat Count": 1,
+        "MITRE ATT&CK Techniques": [
+            {"Technique ID": "T1204.002", "Technique": "Malicious File Execution"},
+            {"Technique ID": "T1082", "Technique": "System Information Discovery"},
+            {"Technique ID": "T1219", "Technique": "Remote Access Software"},
+            {"Technique ID": "T1486", "Technique": "Data Encrypted for Impact"}
+        ],
+        "Mitigation Status": "Pending",
+        "References": [
+            "https://www.securityweek.com/albabat-ransomware-expands-targets-abuses-github/",
+            "https://gbhackers.com/albabat-ransomware-targets-windows-linux-and-macos/"
+        ]
+    },
+    {
+        "Incident ID": "INC-2025-002",
+        "Threat Type": "Phishing",
+        "Title": "Credential Theft via Fake Microsoft 365 Login",
+        "Criticality": "MEDIUM",
+        "Detected Timestamp": "2025-03-29 12:15:00",
+        "Affected Product": ["Windows", "macOS"],
+        "Target Sector": ["Financial Services", "Retail & E-Commerce"],
+        "Region": "North America",
+        "Threat Count": 1,
+        "MITRE ATT&CK Techniques": [
+            {"Technique ID": "T1566", "Technique": "Phishing"},
+            {"Technique ID": "T1190", "Technique": "Exploit Public-Facing Application"}
+        ],
+        "Mitigation Status": "Resolved",
+        "References": [
+            "https://www.darkreading.com/application-security/oauth-attacks-target-microsoft-365-github"
+        ]
+    }
+]
